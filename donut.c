@@ -31,10 +31,10 @@ int shade(struct vector point, struct vector normal) {
 void donut(char* buffer, float R1, float R2, struct vector pos, struct matrix rotation_matrix) {
     float zbuffer[width * height];
     memset(zbuffer, 0, width * height * sizeof(float));
-    for (float theta = 0; theta < 2 * PI; theta += 0.03) {
+    for (float theta = 0; theta < 2 * PI; theta += 0.01) {
         float ct = cos(theta);
         float st = sin(theta);
-        for (float phi = 0; phi < 2 * PI; phi += 0.01) {
+        for (float phi = 0; phi < 2 * PI; phi += 0.03) {
             float cp = cos(phi);
             float sp = sin(phi);
 
